@@ -22,7 +22,7 @@
 
 
 Machine learning projects built from scratch using Python and scikit-learn —
-covering classification, regression, and live model deployment via Flask API.
+covering classification, regression, clustering, and live model deployment via Flask API.
 
 ## Projects
 
@@ -37,10 +37,28 @@ Classifies messages as spam or not spam using Logistic Regression.
 - Metric: Accuracy Score
 - Saved model: `spam_model.pkl`
 
+### Spam Classifier v2 (`spam2.py`)
+Extended spam classifier with larger dataset for proper confusion matrix analysis.
+- Model: LogisticRegression
+- Metrics: Accuracy Score, Confusion Matrix (TP, TN, FP, FN)
+
 ### Random Forest Classifier (`trees.py`)
 Predicts customer churn using ensemble learning.
 - Model: RandomForestClassifier (100 estimators)
 - Metric: Accuracy Score
+
+### Customer Churn Predictor (`churn.py`)
+Predicts whether a customer will leave based on age, spending, and support calls.
+- Data: `churn.csv` loaded with pandas
+- Model: RandomForestClassifier (100 estimators)
+- Metrics: Accuracy Score, Confusion Matrix
+- Saved model: `churn_model.pkl`
+
+### K-Means Clustering (`cluster.py`)
+Groups customers into segments based on spending and visit frequency.
+- Model: KMeans (n_clusters=3)
+- Output: Cluster labels and cluster centers
+- Type: Unsupervised learning (no labels)
 
 ### Model Trainer (`train.py`)
 Trains the spam classifier and serializes it to disk.
@@ -54,6 +72,7 @@ that loads a trained model and returns live predictions.
 ## Tech Stack
 - Python 3.14
 - scikit-learn
+- pandas
 - Flask
 - joblib
 
@@ -70,12 +89,14 @@ that loads a trained model and returns live predictions.
 
 ## Concepts Covered
 - Classification, Regression, Ensemble Methods
+- Unsupervised Learning — K-Means Clustering
 - Train/Test Split + Overfitting vs Generalization
+- Model Evaluation — R2, MAE, Accuracy, Confusion Matrix
 - Model Serialization (joblib/pickle)
 - ML Model Deployment via Flask REST API
 
 ## Setup
-pip install scikit-learn flask joblib
+pip install scikit-learn pandas flask joblib
 
 ## Author
 **Sai Charan** - Python Developer & AI/ML Specialist

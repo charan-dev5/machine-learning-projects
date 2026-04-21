@@ -17,8 +17,8 @@ print("Predictions:", predictions)
 print("Actual:", Y_test)
 
 score = model.score(X_test, Y_test)
-mae = mean_absolute_error(Y_test, predictions)
+mae = mean_absolute_error(Y_test, predictions)     
 r2 = r2_score(Y_test, predictions)
 
-print(f"Accuracy (R2 score): {score: .2f}")
+print(f"Accuracy (R2 score): {score: .2f}")   #how good the predictions are r2 = 1.0 is good , 0.8 is ok  
 print(f"Mean Absolute Error: {mae: .2f}")

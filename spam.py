@@ -24,3 +24,4 @@ predictions = model.predict(X_test)
 print("Predictions:", predictions)
 print("Actual:", Y_test)
 print("Accuracy:", accuracy_score(Y_test, predictions))
+
