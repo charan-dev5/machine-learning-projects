@@ -19,5 +19,5 @@ X = [
 model = KMeans(n_clusters=3, random_state=42)
 model.fit(X)
 
-print("Clusters labels:", model.labels_)
+print("Cluster labels:", model.labels_)
 print("Cluster centers:", model.cluster_centers_)
